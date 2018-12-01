@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer-array name="signal_strength_sharp_shape_points">
+        <!--M-->
+        <item>0</item>
+        <item>1</item>
+        <!--L-->
+        <item>1</item>
+        <item>1</item>
+        <!--L-->
+        <item>1</item>
+        <item>0</item>
+        <!--Z-->
+    </integer-array>
+
+    <integer-array name="signal_strength_rounded_shape_points">
+        <!--M-->
+        <item>241</item>
+        <item>2000</item>
+        <!--L-->
+        <item>1800</item>
+        <item>2000</item>
+        <!--C-->
+        <item>1910</item>
+        <item>2000</item>
+        <item>2000</item>
+        <item>1910</item>
+        <item>2000</item>
+        <item>1800</item>
+        <!--L-->
+        <item>2000</item>
+        <item>241</item>
+        <!--C-->
+        <item>2000</item>
+        <item>152</item>
+        <item>1892</item>
+        <item>107</item>
+        <item>1829</item>
+        <item>170</item>
+        <!--L-->
+        <item>171</item>
+        <item>1829</item>
+        <!--C-->
+        <item>108</item>
+        <item>1892</item>
+        <item>152</item>
+        <item>2000</item>
+        <item>241</item>
+        <item>2000</item>
+        <!--Z-->
+    </integer-array>
+</resources>

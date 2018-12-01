@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="signal_strength_intrinsic_size">20dp</dimen>
+    <fraction name="signal_strength_aspect_ratio">100%</fraction>
+
+</resources>
