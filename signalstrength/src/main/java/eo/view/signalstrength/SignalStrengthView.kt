@@ -18,7 +18,7 @@ class SignalStrengthView @JvmOverloads constructor(
         get() = signalStrengthDrawable.theme
         set(value) {
             if (theme != value) {
-                signalStrengthDrawable.theme = theme
+                signalStrengthDrawable.theme = value
                 invalidate()
             }
         }

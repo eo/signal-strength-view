@@ -9,4 +9,19 @@
 
     <style name="Theme.SignalStrength" parent="Base.Theme.SignalStrength" />
 
+    <style name="Widget.SignalStrength.Chip.Choice" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipStartPadding">12dp</item>
+        <item name="chipEndPadding">12dp</item>
+        <item name="textStartPadding">8dp</item>
+        <item name="chipIconVisible">true</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="chipCornerRadius">4dp</item>
+        <item name="chipMinHeight">36dp</item>
+        <item name="chipStrokeColor">@color/choice_chip_stroke</item>
+        <item name="chipBackgroundColor">?android:attr/windowBackground</item>
+        <item name="chipIconTint">@color/choice_chip_text</item>
+        <item name="android:textColor">@color/choice_chip_text</item>
+        <item name="android:textAppearance">?attr/textAppearanceButton</item>
+    </style>
+
 </resources>

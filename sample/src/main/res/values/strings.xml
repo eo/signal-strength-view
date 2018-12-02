@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Signal Strength View</string>
+
+    <string name="theme_title">Theme</string>
+    <string name="theme_sharp">Sharp</string>
+    <string name="theme_rounded">Rounded</string>
+
+    <string name="signal_level_title">Signal Level</string>
+    <string name="signal_level_value">%1$d%%</string>
 </resources>

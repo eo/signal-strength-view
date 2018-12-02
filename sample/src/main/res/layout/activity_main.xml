@@ -6,13 +6,124 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/startGuideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottomGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="16dp" />
+
+    <eo.view.signalstrength.SignalStrengthView
+        android:id="@+id/signalStrengthView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@id/themeTitle"
+        app:layout_constraintEnd_toEndOf="@id/endGuideline"
+        app:layout_constraintStart_toStartOf="@id/startGuideline"
+        app:layout_constraintTop_toTopOf="@id/topGuideline"
+        app:signalColor="?colorAccent"
+        app:signalLevel="20"
+        app:signalTheme="rounded" />
+
+    <TextView
+        android:id="@+id/themeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/theme_title"
+        android:textAppearance="?attr/textAppearanceBody2"
+        app:layout_constraintBottom_toTopOf="@id/themeChipGroup"
+        app:layout_constraintEnd_toEndOf="@id/endGuideline"
+        app:layout_constraintStart_toStartOf="@id/startGuideline"
+        app:layout_constraintTop_toBottomOf="@id/signalStrengthView" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/themeChipGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:checkedChip="@id/roundedThemeChip"
+        app:chipSpacing="12dp"
+        app:layout_constraintBottom_toTopOf="@id/signalLevelTitle"
+        app:layout_constraintEnd_toEndOf="@id/endGuideline"
+        app:layout_constraintStart_toStartOf="@id/startGuideline"
+        app:layout_constraintTop_toBottomOf="@id/themeTitle"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/roundedThemeChip"
+            style="@style/Widget.SignalStrength.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/theme_rounded"
+            app:chipIcon="@drawable/ic_theme_rounded" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/sharpThemeChip"
+            style="@style/Widget.SignalStrength.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/theme_sharp"
+            app:chipIcon="@drawable/ic_theme_sharp" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <TextView
+        android:id="@+id/signalLevelTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:checked="true"
+        android:text="@string/signal_level_title"
+        android:textAppearance="?attr/textAppearanceBody2"
+        app:layout_constraintBottom_toTopOf="@id/signalLevelSeekBar"
+        app:layout_constraintEnd_toEndOf="@id/endGuideline"
+        app:layout_constraintStart_toStartOf="@id/startGuideline"
+        app:layout_constraintTop_toBottomOf="@id/themeChipGroup" />
+
+    <SeekBar
+        android:id="@+id/signalLevelSeekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:max="100"
+        app:layout_constraintBottom_toTopOf="@id/bottomGuideline"
+        app:layout_constraintEnd_toStartOf="@id/signalLevelValueText"
+        app:layout_constraintStart_toStartOf="@id/startGuideline"
+        app:layout_constraintTop_toBottomOf="@id/signalLevelTitle" />
+
+    <TextView
+        android:id="@+id/signalLevelValueText"
+        android:layout_width="36dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="2dp"
+        android:gravity="center_vertical|end"
+        app:layout_constraintBottom_toBottomOf="@id/signalLevelSeekBar"
+        app:layout_constraintEnd_toEndOf="@id/endGuideline"
+        app:layout_constraintStart_toEndOf="@id/signalLevelSeekBar"
+        app:layout_constraintTop_toTopOf="@id/signalLevelSeekBar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
