@@ -27,6 +27,13 @@ Library contains both `SignalStrengthView` and `SignalStrengthDrawable` classes.
     app:signalTheme="rounded" />
 ```
 
+Sample
+------
+Download sample app under releases to play with the library
+
+![Rounded Theme Screenshot](/images/screenshot_sample_rounded.png)
+![Sharp Theme Screenshot](/images/screenshot_sample_sharp.png)
+
 License
 -------
 
