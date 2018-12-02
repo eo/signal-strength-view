@@ -1,4 +1,6 @@
-# signal-strength-view
+# Signal Strength View
+![Icon](/sample/src/main/res/mipmap-xxxhdpi/ic_launcher.png)
+
 Material design signal strength view for Android
 
 [![Download](https://api.bintray.com/packages/eo/view/signalstrength/images/download.svg) ](https://bintray.com/eo/view/signalstrength/_latestVersion)
