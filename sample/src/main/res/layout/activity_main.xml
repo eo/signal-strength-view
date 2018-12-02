@@ -44,7 +44,7 @@
         app:layout_constraintStart_toStartOf="@id/startGuideline"
         app:layout_constraintTop_toTopOf="@id/topGuideline"
         app:signalColor="?colorAccent"
-        app:signalLevel="20"
+        app:signalLevel="50"
         app:signalTheme="rounded" />
 
     <TextView
