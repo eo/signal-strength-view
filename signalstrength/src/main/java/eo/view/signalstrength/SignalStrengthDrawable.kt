@@ -19,6 +19,7 @@ class SignalStrengthDrawable @JvmOverloads constructor(
         const val MAXIMUM_SIGNAL_LEVEL = 100
 
         private const val BACKGROUND_COLOR_ALPHA = 0.3f
+        private const val ROUNDED_SHAPE_START_OFFSET = 0.07f
     }
 
     private val intrinsicSize =
@@ -50,6 +51,7 @@ class SignalStrengthDrawable @JvmOverloads constructor(
                 field = value
                 shapePoints = getShapePointsForTheme(value)
                 updateShapePath()
+                updateSignalLevelClipRect()
                 invalidateSelf()
             }
         }
@@ -188,6 +190,10 @@ class SignalStrengthDrawable @JvmOverloads constructor(
 
     private fun updateSignalLevelClipRect() {
         signalLevelClipRect.set(shapeBounds)
+        if (theme == SignalStrength.Theme.ROUNDED) {
+            signalLevelClipRect.left += signalLevelClipRect.width() * ROUNDED_SHAPE_START_OFFSET
+        }
+        
         signalLevelClipRect.right -=
                 signalLevelClipRect.width() * (1f - signalLevel.toFloat() / MAXIMUM_SIGNAL_LEVEL)
     }
