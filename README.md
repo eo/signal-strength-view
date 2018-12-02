@@ -1,7 +1,31 @@
 # signal-strength-view
 Material design signal strength view for Android
 
+[![Download](https://api.bintray.com/packages/eo/view/signalstrength/images/download.svg) ](https://bintray.com/eo/view/signalstrength/_latestVersion)
 [![License](https://img.shields.io/badge/license-Apache%202.0-green.svg)](https://github.com/eo/battery-meter-view/blob/master/LICENSE)
+[![License](https://img.shields.io/badge/minSdkVersion-19-red.svg)](https://developer.android.com/about/dashboards/)
+
+Download
+--------
+
+```groovy
+dependencies {
+  implementation 'eo.view:signalstrength:1.0.0'
+}
+```
+
+Usage
+-----
+Library contains both `SignalStrengthView` and `SignalStrengthDrawable` classes. Following XML attributes have corresponding class properties.
+
+```xml
+<eo.view.signalstrength.SignalStrengthView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:signalColor="?colorAccent"
+    app:signalLevel="50"
+    app:signalTheme="rounded" />
+```
 
 License
 -------
