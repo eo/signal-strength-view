@@ -12,7 +12,7 @@ Download
 
 ```groovy
 dependencies {
-  implementation 'eo.view:signalstrength:1.0.0'
+  implementation 'eo.view:signalstrength:1.1.0'
 }
 ```
 
