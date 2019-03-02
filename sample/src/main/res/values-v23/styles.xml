@@ -2,6 +2,7 @@
 <resources>
 
     <style name="Base.V23.Theme.SignalStrength" parent="Base.Theme.SignalStrength">
+        <item name="colorPrimaryDark">@color/primary</item>
         <item name="android:windowLightStatusBar">true</item>
     </style>
 
