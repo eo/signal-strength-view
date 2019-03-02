@@ -9,7 +9,7 @@ import android.view.View
 class SignalStrengthView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
-    defStyleAttr: Int = 0
+    defStyleAttr: Int = R.attr.signalStrengthStyle
 ) : View(context, attrs, defStyleAttr), SignalStrength {
 
     private val signalStrengthDrawable: SignalStrengthDrawable
@@ -46,14 +46,12 @@ class SignalStrengthView @JvmOverloads constructor(
             attrs,
             R.styleable.SignalStrengthView,
             defStyleAttr,
-            0
+            R.style.Widget_SignalStrength
         )
 
         val themes = SignalStrength.Theme.values()
-        val themeIndex = typedArray.getInt(
-            R.styleable.SignalStrengthView_signalTheme,
-            SignalStrength.Theme.SHARP.ordinal
-        ).coerceIn(0, themes.lastIndex)
+        val themeIndex = typedArray.getInt(R.styleable.SignalStrengthView_signalTheme, 0)
+            .coerceIn(0, themes.lastIndex)
 
         signalStrengthDrawable = SignalStrengthDrawable(context, themes[themeIndex])
 

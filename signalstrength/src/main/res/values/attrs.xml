@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <attr name="signalStrengthStyle" type="reference" />
+
     <declare-styleable name="SignalStrengthView">
         <attr name="signalTheme" format="enum">
             <enum name="rounded" value="0" />
