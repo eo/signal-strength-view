@@ -2,8 +2,8 @@
 <resources>
 
     <style name="Widget.SignalStrength" parent="android:Widget">
-        <item name="signalTheme">rounded</item>
-        <item name="signalColor">?android:colorForeground</item>
+        <item name="signalStrengthTheme">rounded</item>
+        <item name="signalStrengthColor">?android:colorForeground</item>
     </style>
 
 </resources>

@@ -50,13 +50,14 @@ class SignalStrengthView @JvmOverloads constructor(
         )
 
         val themes = SignalStrength.Theme.values()
-        val themeIndex = typedArray.getInt(R.styleable.SignalStrengthView_signalTheme, 0)
+        val themeIndex = typedArray.getInt(R.styleable.SignalStrengthView_signalStrengthTheme, 0)
             .coerceIn(0, themes.lastIndex)
 
         signalStrengthDrawable = SignalStrengthDrawable(context, themes[themeIndex])
 
-        signalLevel = typedArray.getInt(R.styleable.SignalStrengthView_signalLevel, signalLevel)
-        color = typedArray.getColor(R.styleable.SignalStrengthView_signalColor, color)
+        signalLevel =
+            typedArray.getInt(R.styleable.SignalStrengthView_signalStrengthLevel, signalLevel)
+        color = typedArray.getColor(R.styleable.SignalStrengthView_signalStrengthColor, color)
 
         typedArray.recycle()
 

@@ -43,9 +43,9 @@
         app:layout_constraintEnd_toEndOf="@id/endGuideline"
         app:layout_constraintStart_toStartOf="@id/startGuideline"
         app:layout_constraintTop_toTopOf="@id/topGuideline"
-        app:signalColor="?colorAccent"
-        app:signalLevel="50"
-        app:signalTheme="rounded" />
+        app:signalStrengthColor="?colorAccent"
+        app:signalStrengthLevel="50"
+        app:signalStrengthTheme="rounded" />
 
     <TextView
         android:id="@+id/themeTitle"

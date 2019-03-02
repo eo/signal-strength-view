@@ -24,9 +24,9 @@ Library contains both `SignalStrengthView` and `SignalStrengthDrawable` classes.
 <eo.view.signalstrength.SignalStrengthView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    app:signalColor="?colorAccent"
-    app:signalLevel="50"
-    app:signalTheme="rounded" />
+    app:signalStrengthColor="?colorAccent"
+    app:signalStrengthLevel="50"
+    app:signalStrengthTheme="rounded" />
 ```
 
 Style
