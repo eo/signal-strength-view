@@ -29,6 +29,10 @@ Library contains both `SignalStrengthView` and `SignalStrengthDrawable` classes.
     app:signalTheme="rounded" />
 ```
 
+Style
+-----
+Signal strength view is styleable using `signalStrengthStyle` in your theme. `Widget.SignalStrength` can be used as a base style.
+
 Sample
 ------
 Download sample app under releases to play with the library
